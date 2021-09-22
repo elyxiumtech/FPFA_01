@@ -1,9 +1,11 @@
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+import 'package:learncourse/Screens/chat_screen.dart';
+import 'package:learncourse/Screens/schedule.dart';
+//import 'package:learncourse/widgets/home_appBar.dart';
+import 'package:learncourse/widgets/homepage_body.dart';
 
-// ignore: import_of_legacy_library_into_null_safe
+import 'settings_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +17,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreen extends State<HomeScreen> {
   int pageIndex = 0;
-  List<Widget> pages = [];
+  List<Widget> pages = [
+    HomeBody(),
+    Schedule(),
+    ChatScreen(),
+    Settings(),
+  ];
 
   @override
   void dispose() {
@@ -25,21 +32,9 @@ class _HomeScreen extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: getBody(),
       bottomNavigationBar: getFooter(),
-      /* floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              selectedTab(4);
-            },
-            child: Icon(
-              Icons.add,
-              size: 25,
-            ),
-            backgroundColor: Colors.pink
-            //params
-            ), */
-      /*  floatingActionButtonLocation:
-            FloatingActionButtonLocation.centerDocked */
     );
   }
 
@@ -54,9 +49,9 @@ class _HomeScreen extends State<HomeScreen> {
     return AnimatedBottomNavigationBar(
       icons: [
         Icons.home,
-        Icons.schedule_outlined,
-        Icons.chat_bubble,
-        Icons.home
+        Icons.schedule_rounded,
+        Icons.chat_bubble_rounded,
+        Icons.settings
       ],
       activeColor: Colors.black,
       splashColor: Colors.amberAccent,

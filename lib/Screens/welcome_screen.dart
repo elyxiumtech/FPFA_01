@@ -22,9 +22,6 @@ class WelcomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    SizedBox(
-                      height: 20,
-                    ),
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),
                       child: Text(
@@ -62,7 +59,7 @@ class WelcomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                          margin: const EdgeInsets.only(bottom: 20),
+                          margin: const EdgeInsets.only(bottom: 20, top: 10),
                           child: const Text("Welcome",
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -71,7 +68,7 @@ class WelcomeScreen extends StatelessWidget {
                                   color: Colors.white)),
                         ),
                         Container(
-                          margin: const EdgeInsets.only(bottom: 50),
+                          margin: const EdgeInsets.only(bottom: 20),
                           child: const Text(
                               "Learn new things daily. Explore thousands of courses. Stay connected to other people. Make learning joyful, not stressed. ",
                               textAlign: TextAlign.center,
@@ -89,7 +86,7 @@ class WelcomeScreen extends StatelessWidget {
                       Navigator.of(context).pushNamed(HomeScreen.routeName);
                     },
                     child: Container(
-                      margin: const EdgeInsets.only(bottom: 60),
+                      margin: const EdgeInsets.only(bottom: 30),
                       padding: const EdgeInsets.symmetric(
                           horizontal: 26, vertical: 16),
                       decoration: BoxDecoration(
