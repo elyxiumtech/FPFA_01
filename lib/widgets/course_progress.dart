@@ -10,6 +10,7 @@ class CourseProgress extends StatelessWidget {
       child: SingleChildScrollView(
         //physics: NeverScrollableScrollPhysics(),
         child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             itemCount: cardColor.length,
@@ -42,7 +43,7 @@ class CourseProgress extends StatelessWidget {
                         Row(
                           children: [
                             Container(
-                              height: 190,
+                              height: 170,
                               //height: MediaQuery.of(context).size.height - 250,
                               width: 2,
                               // width: MediaQuery.of(context).size.width - 50,
@@ -63,7 +64,7 @@ class CourseProgress extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 0, bottom: 35),
+                            margin: EdgeInsets.only(top: 0, bottom: 20),
                             color: Colors.white,
                             child: Text(
                               " 10:30am - 1:30 pm",
@@ -77,8 +78,9 @@ class CourseProgress extends StatelessWidget {
                         children: [
                           Stack(children: [
                             Container(
+                              margin: EdgeInsets.only(bottom: 20),
                               height: 130,
-                              width: 330,
+                              width: 300,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: cardColor[i].withOpacity(0.6),
@@ -94,17 +96,18 @@ class CourseProgress extends StatelessWidget {
                                       Text(
                                         course_desc[i]['course_module'],
                                         style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold),
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600),
                                       ),
                                       SizedBox(
                                         height: 8,
                                       ),
                                       Text(course_desc[i]['course_submodule'],
                                           style: TextStyle(
-                                              fontSize: 14,
-                                              color: Colors.black
-                                                  .withOpacity(0.6)))
+                                              fontSize: 16,
+                                              color:
+                                                  Colors.black.withOpacity(0.7),
+                                              fontWeight: FontWeight.w500))
                                     ]))
                           ]),
                         ],

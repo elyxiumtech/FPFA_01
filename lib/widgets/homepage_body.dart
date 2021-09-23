@@ -113,7 +113,7 @@ class HomeBody extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
                       "Most Viewed",
@@ -124,16 +124,14 @@ class HomeBody extends StatelessWidget {
               Column(
                 children: [
                   Row(children: [
-                    Expanded(
-                      child: Container(
-                        margin: EdgeInsets.only(bottom: 0),
-                        //height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width - 50,
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFFF),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: MostViewedCourses(),
-                      ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 0),
+                      //height: MediaQuery.of(context).size.height,
+                      width: MediaQuery.of(context).size.width - 50,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFFF),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: MostViewedCourses(),
                     ),
                   ]),
                 ],

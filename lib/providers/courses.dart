@@ -9,19 +9,23 @@ const List<Color> cardColor = [
 const List course_desc = [
   {
     'course_module': '1.1 Understanding basics',
-    'course_submodule': "Termins and examples  "
+    'course_submodule': "Termins and examples  ",
+    "time": "10:30am - 1:00pm",
   },
   {
     'course_module': '1.2 Creating first AR app',
-    'course_submodule': " Create your first AR app"
+    'course_submodule': " Create your first AR app",
+    "time": "1:00pm - 02:30pm ",
   },
   {
-    'course_module': '1.1 Understanding basics',
-    'course_submodule': "Termins and examples  "
+    'course_module': '1.3 Understanding basics',
+    'course_submodule': "Termins and examples  ",
+    "time": "2:30pm - 04:00pm",
   },
   {
-    'course_module': '1.1 Understanding basics',
-    'course_submodule': "Termins and examples  "
+    'course_module': '1.4 Understanding basics',
+    'course_submodule': "Termins and examples  ",
+    "time": "04:00pm - 05:30pm",
   }
 ];
 const List online_data_one = [
@@ -66,17 +70,17 @@ const List instructor_data = [
   },
   {
     "instructor_img": "assets/images/11.jpg",
-    "instructor_pos": "UX/UI Designer",
+    "instructor_pos": "Voice designer",
     "instructor_name": "Matty Hiroto"
   },
   {
     "instructor_img": "assets/images/11.jpg",
-    "instructor_pos": "UX/UI Designer",
+    "instructor_pos": "UX developer",
     "instructor_name": "Matty Hiroto"
   },
   {
     "instructor_img": "assets/images/11.jpg",
-    "instructor_pos": "UX/UI Designer",
+    "instructor_pos": "UX writer",
     "instructor_name": "Matty Hiroto"
   }
 ];

@@ -19,7 +19,7 @@ class MostViewedCourses extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0, bottom: 20),
+                  padding: const EdgeInsets.only(top: 10.0, bottom: 10),
                   child: Row(
                     children: [
                       Container(
@@ -50,7 +50,9 @@ class MostViewedCourses extends StatelessWidget {
                               child: Text(
                                 instructor_data[i]['instructor_name'],
                                 style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w900),
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w900),
                               ),
                             ),
                           ]),
@@ -62,7 +64,9 @@ class MostViewedCourses extends StatelessWidget {
                               child: Text(
                                 instructor_data[i]['instructor_pos'],
                                 style: TextStyle(
-                                    fontSize: 1, fontWeight: FontWeight.w600),
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600),
                               ),
                             ),
                           ]),

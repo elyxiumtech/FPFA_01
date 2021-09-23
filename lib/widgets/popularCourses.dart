@@ -7,12 +7,13 @@ class PopularCourses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      //physics: NeverScrollableScrollPhysics(),
       itemBuilder: (c, i) {
         return Stack(children: [
           Container(
-              height: 130,
-              margin: EdgeInsets.only(right: 16),
-              width: MediaQuery.of(context).size.width - 250,
+              height: 150,
+              margin: EdgeInsets.only(right: 10),
+              width: MediaQuery.of(context).size.width - 220,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(online_data_one[i]['img']),

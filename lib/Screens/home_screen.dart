@@ -1,7 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:learncourse/Screens/chat_screen.dart';
-import 'package:learncourse/Screens/schedule.dart';
+import 'package:learncourse/Screens/course_schdeule.dart';
 //import 'package:learncourse/widgets/home_appBar.dart';
 import 'package:learncourse/widgets/homepage_body.dart';
 
@@ -46,7 +46,8 @@ class _HomeScreen extends State<HomeScreen> {
   }
 
   Widget getFooter() {
-    return AnimatedBottomNavigationBar(
+    return Container(
+        child: AnimatedBottomNavigationBar(
       icons: [
         Icons.home,
         Icons.schedule_rounded,
@@ -61,13 +62,14 @@ class _HomeScreen extends State<HomeScreen> {
 
       //notchSmoothness: NotchSmoothness.softEdge,
       leftCornerRadius: 0,
+
       iconSize: 25,
       rightCornerRadius: 0,
       onTap: (index) {
         selectedTab(index);
       },
-      //other params
-    );
+    ) //other params
+        );
   }
 
   selectedTab(index) {
